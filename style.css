@@ -1,0 +1,36 @@
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+body{
+   background-color: #F9F8F6;
+   width: 80%;
+   margin: auto;
+}
+header{
+   display: flex;
+   justify-content: center;
+}
+nav{
+   background-color: #234C6A;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  display: flex;             /* agar bisa center */
+  align-items: center;       /* center vertikal */
+  height: 40px;              /* tinggi navbar */
+  padding: 0 25px;           /* jarak kiri kanan */
+  color: #F1F3E0;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #F1F3E0;
+  color: #234C6A;
+}
