@@ -46,7 +46,14 @@ nav ul li a:hover {
    color: whitesmoke;
 }
 
-.produk img{
-   width: 30%;
+figure img{
+   width: 100%;
 }
-
+figure{
+   display: grid;
+   grid-template-columns: 300px 1fr;
+   gap : 10px;
+}
+figure figcaption img{
+   width: 20%;
+}
