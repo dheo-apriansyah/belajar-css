@@ -1,59 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Special+Gothic+Condensed+One&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 *{
    box-sizing: border-box;
    padding: 0;
    margin: 0;
 }
-a{
-   color: whitesmoke;
-   /* text-decoration: ; */
+:root{
+   --dark-navy : #0F172A; 
+   --slate : #1E293B;
+   --blue : #38BDF8;
+   --softwhite :#F1F5F9;
+   --gray : #94A3B8; 
 }
 body{
-   background-color: #EDDCC6;
-   width: 80%;
-   margin: auto;
+   font-family: "Zalando Sans", sans-serif;
+   background-color: var(--dark-navy);
+   color: var(--softwhite);
+   line-height: 1.6;
 }
+.container{
+   max-width: 1100px;
+   margin: auto;
+   width: 90%;
+}
+
 header{
-   display: flex;
-   justify-content: center;
+   background-color: var(--dark-navy);
+   position: sticky;
+   top: 0;
+   z-index: 1000;
 }
 nav{
-   background-color: #234C6A;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 0;
 }
-nav ul {
-  display: flex;
-  list-style: none;
+nav span{
+   color: var(--blue);
 }
-nav ul li a {
-  display: flex;             /* agar bisa center */
-  align-items: center;       /* center vertikal */
-  height: 40px;              /* tinggi navbar */
-  padding: 0 25px;           /* jarak kiri kanan */
-  color: #F1F3E0;
-  text-decoration: none;
+nav ul{
+   list-style: none;
+   display: flex;
+   gap: 20px;
 }
-nav ul li a:hover {
-  background-color: #F1F3E0;
-  color: #234C6A;
+nav a{
+   text-decoration: none;
+   color: var(--softwhite);
+   transition: 0.3s;
 }
-
-.hero{
-   height: 40vh;
-   background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(img/header3.jpeg) center/cover no-repeat;
+nav a:hover{
+   color: var(--blue);
+}
+section{
+   padding: 50px 0;
+   border-top: 1px solid var(--gray);
+}
+/* Hero */
+section h2{
+   color: var(--softwhite);
+}
+#hero{
+   height: 90vh;
    display: flex;
    align-items: center;
-   justify-content: center;
-   text-align: center;
-   color: whitesmoke;
+}
+#hero h2{
+   font-size: 41px;
+}
+#hero span{
+   color: var(--blue);
+}
+#hero p{
+   margin: 15px 0;
+   color: var(--gray);
+}
+.btn{
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: var(--blue);
+   color: var(--dark-navy);
+   text-decoration: none;
+   border-radius: 5px;
+   font-weight: 600;
 }
 
-figure img{
-   width: 100%;
+/* About */
+#about p {
+   color: var(--gray);
 }
-figure{
+
+/* skills */
+.skills{
    display: grid;
-   grid-template-columns: 300px 1fr;
-   gap : 10px;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   gap: 20px;
 }
-figure figcaption img{
-   width: 20%;
+.skills div{
+   background-color: var(--slate);
+   padding: 20px;
+   text-align: center;
+   border-radius: 8px;
+   transition: 0.3s;
+}
+.skills div:hover{
+   background-color: var(--gray);
+   color: var(--dark-navy);
+}
+
+/* project */
+.projects{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px;
+}
+article{
+   background-color: var(--slate);
+   padding: 20px;
+   border-radius: 8px;
+}
+
+
+footer{
+   text-align: center;
+   margin: 50px 0;
 }
