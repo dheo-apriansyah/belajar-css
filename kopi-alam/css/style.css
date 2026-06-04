@@ -1,0 +1,30 @@
+:root{
+   
+   --dark-brown : #3E2723; /* header / background */
+   --olive-green : #6B8E23;
+   --beige : #F5F5DC; /* background utama */
+   --soft-white : #FAFAFA; /* text area */
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;  
+   border: none;
+   text-decoration: none;
+}
+body{
+   font-family: "Quicksand", sans-serif;
+   background-color: var(--beige);
+}
+
+/* navbar */
+.navbar{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1.4rem 7%;
+   background-color: var(--dark-brown);
+   border-bottom: 1px solid;
+}

@@ -16,7 +16,8 @@ inline-block
 display grid
 - buat baris kolam otomatis
 
-grid-template-columns
+grid-template-columns dan grid-template-rows
+- grid bisa atur ukuran column dan baris sekaligus
 - untuk menentukan jumlah kolom dalam grid
 
 repeat(..)
@@ -38,3 +39,34 @@ min-max(150px, 1fr)
 - kalau ada 2 atau lebih semua dapat bagian yang sama
 - fr otomatis menyusaikan ukuran layar
 - responsive secara natural
+
+div p
+- semua element p di dalam div di pilih
+div > p
+- pilih element p dari anak kandung(parent) element div
+
+div + p
+- memilih p setelah div(saudara)
+- hanya 1 saudara saja
+
+div ~ p
+- memilih semua p setelah div
+
+p[title~="belajar"]
+- memilih semua element p dengan atribut title yang terdapat kata belajar
+
+p[title|="belajar"]
+- memilih semua attribut title yang meliki value belajar atau belajar yang diikuti dengan karakter -
+
+p[title^="belajar"]
+- memilih semua element p yang memiliki attribut title di mulai dengan kata "belajar"
+
+p[title$="belajar"]
+- memilih semua element p yang memiliki attribut title di akhiri dengan kata "belajar
+
+p[title*="belajar"]
+- memilih semua element p yang memiliki attribut title yang menggandung kata "belajar"
+[title*="belajar"]
+- selector tanpa tag
+- bisa langsung menggunakan attribut selector
+- bisa di gunakan pada class dan ID
