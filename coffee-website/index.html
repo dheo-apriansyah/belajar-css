@@ -7,12 +7,15 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   <!-- Header / navar -->
    <header>
       <nav class="navbar section-content">
          <a href="#" class="nav-logo">
             <h2 class="logo-text"><i class="bi bi-cup-hot-fill"></i> Coffee</h2>
          </a>
          <ul class="nav-menu">
+            <button id="menu-close-button" class="bi bi-x"></button>
+            
             <li class="nav-item">
                <a href="#" class="nav-link">Home</a>
             </li>
@@ -32,7 +35,43 @@
                <a href="#" class="nav-link">Contact</a>
             </li>
          </ul>
+
+         <button id="menu-open-button" class="bi bi-list"></button>
       </nav>
    </header>
+
+   <!-- Hero Section -->
+   <main>
+      <section class="hero-section">
+         <div class="section-content">
+            <div class="hero-details">
+               <h2 class="title">Best Coffee</h2>
+               <h3 class="subtitle">Lorem ipsum dolor sit amet consectetur.</h3>
+               <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit quasi ea harum! Earum voluptatibus cum modi quis dolor, officiis asperiores?</p>
+
+               <div class="buttons">
+                  <a href="#" class="button order-now">Order Now</a>
+                  <a href="#" class="button contact-us">Contact Us</a>
+               </div>
+              
+            </div>
+            <div class="hero-image-wrapper">
+               <img src="img/images/coffee-hero-section.png" alt="Hero" class="hero-image">
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <script>
+      const menuOpenButton = document.querySelector('#menu-open-button');
+      const menuCloseButton = document.querySelector('#menu-close-button');
+
+      menuOpenButton.addEventListener('click', () =>{
+         document.body.classList.toggle('show-mobile-menu');
+      })
+
+      menuCloseButton.addEventListener('click', ()=> menuOpenButton.click());
+
+   </script>
 </body>
 </html>
