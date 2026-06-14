@@ -70,3 +70,25 @@ p[title*="belajar"]
 - selector tanpa tag
 - bisa langsung menggunakan attribut selector
 - bisa di gunakan pada class dan ID
+
+fungsi :where() dan :is
+- mengelompokan element sekaligus
+- contoh tanpa where :
+header a, main a, footer a {
+  color: red;
+}
+- contoh dengan where : 
+:where(header, main, footer) a {
+  color: red;
+}
+- bedanya ada di dalam bobot (Specificity atau tingkat prioritas)
+- :is >> menggikuti yang paling kuat di dalam kurungnya
+- :where >> bobot nya selalau nol
+
+fungsi object-fit : cover :
+- menyesuaikan ukuran gambar agar pas dengan wadah nya (container)
+- menjaga agar gambar tidak gepeng atau melar
+
+fungsi aspect-ratio: 1
+- memaksa element agar berbentuk sempurna
+- 
