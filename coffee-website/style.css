@@ -114,7 +114,7 @@ header .navbar{
 }
 
 
-/* Hero section */
+/* Hero section styling*/
 .hero-section{
    min-height: 100vh;
    background: var(--primary-color);
@@ -171,7 +171,8 @@ header .navbar{
    margin-right: 30px
 }
 
-/* About section */
+
+/* About section styling */
 .about-section{
    padding: 120px 0;
    background-color: var(--light-pink-color);
@@ -214,6 +215,55 @@ header .navbar{
    color: var(--secondary-color);
 }
 
+
+/* Menu Section styling */
+.menu-section{
+   color: var(--white-color);
+   background-color: var(--dark-color);
+   padding: 50px 0 100px;
+}
+.menu-section .menu-list{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 110px;
+   align-items: center;
+   justify-content: space-between;
+}
+.menu-section .menu-list .menu-item{
+   display: flex;
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+   justify-content: space-between;
+   width: calc(100% / 3 - 110px);
+}
+.menu-section .menu-list .menu-item .menu-image{
+   max-width: 83%;
+   aspect-ratio: 1;
+   margin-bottom: 15px;
+   object-fit: contain;
+}
+.menu-section .menu-list .menu-item .name{
+   margin: 12px 0;
+   font-size: var(--font-size-l);
+   font-weight: var(--font-weight-semibold);
+}
+.menu-section .menu-list .menu-item .text{
+   font-size: var(--font-size-m);
+}
+
+
+/* Responsive media query max 1024px */
+@media screen and (max-width : 1024px){
+
+   /* Menu Section styling */
+   .menu-section .menu-list{
+      gap: 60px;
+   }
+   .menu-section .menu-list .menu-item{
+      width: calc(100% / 3 - 60px);
+   }
+}
 /* Responsive media query max 900px */
 @media screen and (max-width : 900px) {
 
@@ -302,5 +352,26 @@ header .navbar{
       height: 100%;
       max-width: 250px;
       aspect-ratio: 1;
+   }
+
+      /* Menu Section styling */
+      .menu-section .menu-list {
+         gap: 30px;
+      }
+      .menu-section .menu-list .menu-item {
+         width: calc(100% / 2 - 30px);
+      }
+      .menu-section .menu-list .menu-item .menu-image{
+         max-width: 200px;
+      }
+}
+/* Responsive media query max 640px */
+@media screen and (max-width : 640px){
+   /* Menu Section styling */
+   .menu-section .menu-list {
+         gap: 60px;
+      }
+   .menu-section .menu-list .menu-item{
+      width: 100%;
    }
 }

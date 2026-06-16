@@ -91,4 +91,7 @@ fungsi object-fit : cover :
 
 fungsi aspect-ratio: 1
 - memaksa element agar berbentuk sempurna
-- 
+
+fungsi calc(100% / 2 - 30px) :
+- mengambil setengah (50%) dan di kurang 30px
+- ukurang element child mengikuti ukurang parent yang di calc()
